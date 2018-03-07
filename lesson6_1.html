@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/ajax.js"></script>
+	</head>
+	<style>
+	.test_ajax{width: 350px;height: 150px;margin: 0 auto;border: 1px solid #ddd;padding: 10px;}
+		#ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		
+		a {
+			text-decoration: none;
+			color: #222;
+		}
+		
+		.tea {
+			color: red;
+		}
+		table{margin: 0;padding: 0;}
+	</style>
+	<script>
+		window.onload = function() {
+			var oUl = document.getElementById('ul');
+			var oBtn = document.getElementsByTagName('a');
+			var i = 0;
+
+			for(i = 0; i < oBtn.length; i++) {
+				oBtn[i].index = i;
+				oBtn[i].onclick = function() {
+					for(n = 0; n < oBtn.length; n++) {
+						oBtn[n].className = '';
+						this.className = 'tea';
+					}
+
+					ajax('page' + (this.index + 2) + '.txt', function(str) {
+						oUl.innerHTML = '';
+						var aDate = eval(str);
+						for(i = 0; i < aDate.length; i++) {
+							var oLi = document.createElement('li');
+							oLi.innerHTML = '<span>'+'userName:'+'<strong>'+aDate[i].user+'</strong>' +'</span>'+'&nbsp'+'&nbsp'+ 
+							'<span>'+'password:'+'<strong>'+aDate[i].pass+'</strong>'+'</span>';
+							
+							oUl.appendChild(oLi);
+						}
+					})
+
+				}
+			}
+		}
+	</script>
+
+	<body>
+		<div class="test_ajax">
+		<ul id="ul">
+		<li>
+			<span>userName:<strong>abc&nbsp;</strong></span>
+			<span>password:<strong>123</strong></span>
+		</li>
+		<li>
+			<span>userName:<strong>yezi&nbsp;</strong></span>
+			<span>password:<strong>456</strong></span>
+		</li>
+		<li>
+			<span>userName:<strong>sishen&nbsp;</strong></span>
+			<span>password:<strong>789</strong></span>
+		</li>
+		<li>
+			<span>userName:<strong>qingzi&nbsp;</strong></span>
+			<span>password:<strong>213</strong></span>
+		</li>
+		<li>
+			<span>userName:<strong>anthony&nbsp;</strong></span>
+			<span>password:<strong>546</strong></span>
+		</li>
+		</ul>
+		<a href="javascript:;" class="tea">1</a>
+		<a href="javascript:;">2</a>&nbsp;
+		<a href="javascript:;">3</a>
+		<a href="javascript:;">4</a>
+		</div>
+	</body>
+
+</html>

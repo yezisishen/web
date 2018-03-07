@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#chuancan{width: 200px;margin: 0 auto;}
+		</style>
+		<script>
+			window.onload = function(){
+				var Otan = document.getElementById('Tan');
+				Otan.onclick = function(){
+					alert(document.getElementById('input1').value);
+					alert(document.getElementById('input2').value);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="chuancan">
+			<p><input id="input1" type="text" value="北京"></p>
+			<p><input id="input2" type="text" value="朝阳区"></p>
+			<p><input type="button" value="弹出" id="Tan"/></p>
+		</div>
+	</body>
+</html>

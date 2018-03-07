@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div{width: 200px;margin:0 auto;}
+			#remaind{width: 150px;border: 1px solid red; color: red;margin: 0;padding: 0;display: none;}
+			label{cursor: pointer;}
+		</style>
+		<script>
+			window.onload = function(){
+				var Oremaind = document.getElementById('remaind');
+				var Olabel = document.getElementById('label');
+				Olabel.onmouseover = function(){
+					Oremaind.style.display = 'block';
+				}
+				Olabel.onmouseout = function(){
+					Oremaind.style.display = 'none';
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div">
+			<label id="label">
+				<input type="checkbox" />记住密码
+			</label>
+			<p id="remaind">请检查周围环境是否安全</p>
+		</div>
+	</body>
+</html>

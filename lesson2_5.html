@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片列表:鼠标移入移出改变透明度</title>
+		<style>
+			#div{width: 650px;margin: 0 auto;margin-top: 50px;padding: 10px;border: 1px solid #DDDDDD;border-radius: 10px;}
+			#list{width: 650px;margin: 0;padding: 0;list-style: none;}
+			#list li{width: 128px;border: 1px solid #DDDDDD;float: left;cursor: pointer;opacity: 0.5;}
+			#list li.aa{opacity: 1;}
+			.clear{clear: both;}
+		</style>
+		<script>
+			window.onload = function(){
+				var aLi = document.getElementsByTagName('li');
+				for(i=0;i<aLi.length;i++){
+					aLi[i].onmouseover = function(){
+						this.className = 'aa'
+					}
+					aLi[i].onmouseout = function(){
+						this.className = '';
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div">
+			<ul id="list">
+				<li><img src="img/lesson2/1.jpg"></li>
+				<li><img src="img/lesson2/2.jpg"></li>
+				<li><img src="img/lesson2/3.jpg"></li>
+				<li><img src="img/lesson2/4.jpg"></li>
+				<li><img src="img/lesson2/5.jpg"></li>
+				<li><img src="img/lesson2/6.jpg"></li>
+				<li><img src="img/lesson2/7.jpg"></li>
+				<li><img src="img/lesson2/8.jpg"></li>
+				<li><img src="img/lesson2/9.jpg"></li>
+				<li><img src="img/lesson2/10.jpg"></li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</body>
+</html>

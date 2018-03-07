@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div{width: 200px;margin: 0 auto;margin-top: 50px;}
+			#list{width: 100px;border: 1px solid #FFDDDD;display: none;}
+			p{margin: 0;padding: 0;cursor: pointer;height: 30px;line-height: 30px;}
+			#close{border-top: 1px solid #dddddd;}
+		</style>
+		<script>
+			window.onload = function(){
+				var oBtn = document.getElementById('btn');
+				var aList = document.getElementById('list');
+				var oClose = document.getElementById('close');
+				
+				oBtn.onclick = function(){
+					if(aList.style.display == 'block'){
+						aList.style.display = 'none';
+					}else{
+						aList.style.display = 'block';
+					}
+				}
+				oClose.onclick = function(){
+					aList.style.display = 'none';
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div">
+			<button id="btn">输入法</button>
+			<div id="list">
+				<p>搜狗输入法</p>
+				<p>QQ全拼</p>
+				<p>搜狗五笔</p>
+				<p id="close">关闭</p>
+			</div>
+		</div>
+	</body>
+</html>

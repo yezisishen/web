@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM操作</title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/reset.css" />
+	</head>
+	<style>
+		.all{width: 100%;}
+		.all ul{width: 300px;height: 300px;margin: 0 auto;padding: 20px;}
+		.all ul li{cursor: pointer;}
+	</style>
+	<script>
+		$(function() {
+			$('.p_find').click(function(){
+				alert('根据选择器去查找相应内容!!!')
+			})
+			$('.p_add').click(function(){
+				var p = $('<p>'+'动态创建P元素'+ '</p>');
+				$('.p_add').append(p);
+			})
+			$('.p_charu').click(function(){
+				$('.p_charu').append('<div class="append">通过append方法添加的元素</div>');
+			})
+			$('.p_remove').click(function(){
+				$('.p_charu').remove();
+			})
+			$('.p_clone').click(function(){
+				alert('clone函数');
+			})
+			$('.p_wrap').click(function(){
+				$('.p_wrap').wrap('<div></div>');
+				alert('p标签外包裹了一层div');
+			})
+			$('.p_replay').click(function(){
+				$('<p>点击内容替换了</p>').replaceAll('.p_replay');
+			})
+
+		})
+	</script>
+
+	<body>
+		<div class="all">
+			<ul>
+				<li>
+					<p class="p_find">1、查找</p>
+				</li>
+				<li>
+					<p class="p_add">2、创建</p>
+				</li>
+				<li>
+					<p class="p_charu">3、插入</p>
+				</li>
+				<li>
+					<p class="p_remove">4、删除</p>
+				</li>
+				<li>
+					<p class="p_clone">5、复制</p>
+				</li>
+				<li>
+					<p class="p_wrap">6、包裹</p>
+				</li>
+				<li>
+					<p class="p_replay">7、替换</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>复选框</title>
+		<style>
+			#list{width: 150px;margin: 0 auto;margin-top: 50px;border: 1px solid #DDDDDD;
+			border-radius: 5px;}
+			#list .con{width: 100%;border-bottom: 1px solid #DDDDDD;}
+			#list p{margin: 0;padding: 0;}
+			#list a{cursor: pointer;}
+		</style>
+		<script>
+			window.onload = function(){
+				var oInput = document.getElementById('list').getElementsByTagName('input');
+				var oY = document.getElementById('Y');
+				var oN = document.getElementById('N');
+				
+				oY.onclick = function(){
+					if(oInput == false){
+						oInput
+					}
+				}
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="list">
+			<p class="con"><input type="checkbox"/><a id="Y">全选</a>/<a id="N">反选</a></p>
+			<p><input type="checkbox" />选项一</p>
+			<p><input type="checkbox" />选项二</p>
+			<p><input type="checkbox" />选项三</p>
+			<p><input type="checkbox" />选项四</p>
+			<p><input type="checkbox" />选项五</p>
+			<p><input type="checkbox" />选项六</p>
+			<p><input type="checkbox" />选项七</p>
+			<p><input type="checkbox" />选项八</p>
+			<p><input type="checkbox" />选项九</p>
+			<p><input type="checkbox" />选项十</p>
+			<p><input type="checkbox" />选项十一</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.home{width: 200px;margin: 0 auto;}
+			#div{width: 100px;height: 100px;margin: 0 auto;background: red;margin-top: 20px;margin-bottom: 20px;}
+			.home button{width: 50px;margin-left: 10px;}
+			.home .res{margin-left: 75px;}
+		</style>
+	</head>
+	<body>
+		<div class="home">
+			<button onclick="changeWidth();">变宽</button>
+			<button onclick="changeHeight();">变高</button>
+			<button onclick="changeColor();">变色</button>
+			
+			<div id="div"></div>
+			<button onclick="changeDis();">隐藏</button>
+			<button class="res" onclick="changeRes();">重置</button>
+		</div>
+		<script>
+			function changeWidth(){
+				document.getElementById("div").style.width = '200px';
+			}
+			function changeHeight(){
+				document.getElementById('div').style.height = '200px';
+			}
+			function changeColor(){
+				document.getElementById('div').style.background = 'black';
+			}
+			function changeDis(){
+				document.getElementById('div').style.display = 'none';
+			}
+			function changeRes(){
+				document.getElementById('div').style.width = '100px';
+				document.getElementById('div').style.height = '100px';
+				document.getElementById('div').style.background = 'red';
+				document.getElementById('div').style.display = 'block';
+			}
+		</script>
+	</body>
+</html>

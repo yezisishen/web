@@ -1,0 +1,12 @@
+body{background: #CCCCCC;}
+.changBg{width: 400px;margin: 0 auto;}
+#ul1{width: 100%;height: 30px;margin-top: 50px;}
+#ul1 li{width: 10px;height: 10px;float: left;margin-left: 20px;cursor: pointer;}
+#ul2 li{width: 60px;height: 30px;line-height: 30px;text-align: center;border:1px solid #FFFFFF ;
+float: left; background: black;}
+a{color: #FFFFFF;}
+#ul1 .black{background: black;border: 3px solid #FFFFFF;}
+#ul1 .green{background: green;}
+#ul1 .red{background: red;}
+#ul2{margin-top: 20px;}
+ul{list-style: none;}

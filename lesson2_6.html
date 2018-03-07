@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简易选项卡</title>
+		<style>
+			h2{text-align: center;}
+			#test{width: 300px;border: 1px solid #DDDDDD;margin: 0 auto;}
+			#nav li{width: 74px;height: 30px;line-height: 30px;text-align: center;
+			border-right: 1px solid #FFFFFF;background: #CCCCCC;float: left;cursor: pointer;}
+			#nav li.aa{background: cyan;}
+			ul{padding: 0;margin: 0;list-style: none;}
+			#contain ul{display: none;}
+			#test_new{width: 400px;margin: 0 auto;border: 1px solid #DDDDDD;margin-top: 50px;}
+			h3{padding: 0;margin: 0;text-align: center;}
+			#ul1{width: 50px;float: left;}
+			#ul1 li{width: 50px;height: 30px;line-height: 30px;text-align: center;border-bottom: 1px solid #FFFFFF;
+			background: #CCCCCC;cursor: pointer;}
+			#ul1 li.bb{background: cyan;}
+			#list{width: 348px;float: left;border: 1px solid #DDDDDD;}
+			#list ul{display: none;}
+		</style>
+		<script>
+			window.onload = function(){
+				var aLi = document.getElementById('nav').getElementsByTagName('li');
+				var aUl = document.getElementById('contain').getElementsByTagName('ul');
+				for(i=0;i<aLi.length;i++){
+					aLi[i].index = i;
+					aLi[i].onmouseover = function(){
+						for(n=0;n<aLi.length;n++){
+							aLi[n].className = '';
+							this.className = 'aa';
+						}
+						for(n=0;n<aUl.length;n++){
+							aUl[n].style.display = 'none';
+							aUl[this.index].style.display = 'block';
+						}
+					}
+				}
+				
+				var bLi = document.getElementById('ul1').getElementsByTagName('li');
+				var bUl = document.getElementById('list').getElementsByTagName('ul');
+				for(i=0;i<bLi.length;i++){
+					bLi[i].index = i;
+					bLi[i].onmouseover = function(){
+						for(n=0;n<bLi.length;n++){
+							bLi[n].className = '';
+							this.className = 'bb';
+						}
+						for(n=0;n<bUl.length;n++){
+							bUl[n].style.display = 'none';
+							bUl[this.index].style.display = 'block';
+						}
+					}
+				}
+				
+			}
+		</script>
+		
+	</head>
+	<body>
+		<h2>我的兴趣爱好</h2>
+		<div id="test">
+			<ul id="nav">
+				<li class="aa">运动</li>
+				<li>游戏</li>
+				<li>小说</li>
+				<li>学习</li>
+			</ul>
+			<div id="contain">
+				<ul style="display: block;">
+					<li>篮球</li>
+					<li>足球</li>
+					<li>乒乓球</li>
+					<li>羽毛球</li>
+					<li>排球</li>
+					<li>网球</li>
+				</ul>
+				<ul>
+					<li>王者荣耀</li>
+					<li>穿越火线</li>
+					<li>地下城与勇士</li>
+					<li>绝地求生</li>
+					<li>光荣使命</li>
+				</ul>
+				<ul>
+					<li>《黑道特种兵》</li>
+					<li>《校花的贴身高手》</li>
+					<li>《凡人修仙传》</li>
+					<li>《诛仙》</li>
+					<li>《神墓》</li>
+					<li>《斗破苍穹》</li>
+					<li>《天庐风云》</li>
+				</ul>
+				<ul>
+					<li>JavaScript</li>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>CSS3</li>
+					<li>HTML5</li>
+					<li>Ajax</li>
+					<li>jQuery</li>
+					<li>Json</li>
+					<li>node.js</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="test_new">
+			<h3>我的兴趣爱好</h3>
+			<ul id="ul1">
+				<li class="bb">运动</li>
+				<li>游戏</li>
+				<li>小说</li>
+				<li>学习</li>
+			</ul>
+			<div id="list">
+				<ul style="display: block;">
+					<li>篮球</li>
+					<li>足球</li>
+					<li>乒乓球</li>
+					<li>羽毛球</li>
+					<li>排球</li>
+					<li>网球</li>
+				</ul>
+				<ul>
+					<li>王者荣耀</li>
+					<li>穿越火线</li>
+					<li>地下城与勇士</li>
+					<li>绝地求生</li>
+					<li>光荣使命</li>
+				</ul>
+				<ul>
+					<li>《黑道特种兵》</li>
+					<li>《校花的贴身高手》</li>
+					<li>《凡人修仙传》</li>
+					<li>《诛仙》</li>
+					<li>《神墓》</li>
+					<li>《斗破苍穹》</li>
+					<li>《天庐风云》</li>
+				</ul>
+				<ul>
+					<li>JavaScript</li>
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>CSS3</li>
+					<li>HTML5</li>
+					<li>Ajax</li>
+					<li>jQuery</li>
+					<li>Json</li>
+					<li>node.js</li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+</html>

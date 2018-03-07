@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>弹出层效果</title>
+		<style>
+			body{margin: 0;padding: 0;}
+			#bg{width: 100%;height: 100%;background: #ccc;position: absolute;opacity: 0.5;display: none;}
+			#Tan{cursor: pointer;}
+			#div{width: 300px;height: 200px;border: 1px solid #000000;position: absolute;top: 40%;left: 40%;display: none;}
+			#div input{display: block;position: absolute;right: 0px;top: 0;text-align: center;font-size: 18px;color: #FFFFFF;
+			border: 0px;background: #ccc;cursor: pointer;}
+		</style>
+		<script>
+			window.onload = function(){
+				var oBg = document.getElementById('bg');
+				var oDiv = document.getElementById('div');
+				var oTan = document.getElementById('Tan');
+				var oBtn = document.getElementById('btn');
+				oTan.onclick = function(){
+					oBg.style.display = 'block';
+					oDiv.style.display = 'block';
+				}
+				oBtn.onclick = function(){
+					oBg.style.display = 'none';
+					oDiv.style.display = 'none';
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="bg"></div>
+		<div id="div"><input id="btn" type="button" value="X"/></div>
+		<center><button id="Tan">弹出层</button></center>
+	</body>
+</html>

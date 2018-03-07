@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div{width: 100px;height: 100px;background: black;color: #FFFFFF;margin: 0 auto;cursor: pointer;}
+			#div.aa{background: red;}
+		</style>
+		<script>
+			window.onload = function(){
+				var oDiv = document.getElementById('div');
+				
+				oDiv.onmouseover = function(){
+					oDiv.className = 'aa';
+				}
+				oDiv.onmouseout = function(){
+					oDiv.className = '';
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div">
+			鼠标移入改变样式
+		</div>
+	</body>
+</html>

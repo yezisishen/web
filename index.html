@@ -1,0 +1,104 @@
+<!DOCTYPE >
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+     <style type="text/css">
+     	#test{width: 385px;margin: 0 auto;}
+     	#MM{width: 350px;height: auto;border: 12px solid #eee;border-radius: 10px;
+margin: 10px auto 0;padding: 5px 5px 4px;}
+		#MM span{background: #99CC00;height: 30px;line-height: 30px;border-bottom: 1px solid #fff;
+cursor: pointer;color: #FFFFFF;padding-left: 20px;font-size: 16px;display: block;width: 330px;}
+		#MM ul{width: 100%;}
+		#MM li{font-size: 14px;padding-left: 20px;color: #FFFFFF;cursor: pointer;border-bottom: 1px solid #FFFFFF;
+height: 30px;line-height: 30px;background: #77CCFF;}
+        .Menu{ display: none;}
+        a{color: #FFFFFF;}
+        a:hover{text-decoration: none;}
+        
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js" ></script>
+     <script type="text/javascript">
+        $(document).ready(function() {
+            $("span").click(function() {
+            $(".Menu").not($(this).next(".Menu")).slideUp("fast");//除去a的下一个div页面其他div变为隐藏。。。
+                $(this).next(".Menu").slideToggle("fast");//所选div改变显示状态
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="test">
+        <div id="MM">
+            <span>第一课(5)</span>
+            <div class="Menu">
+                <ul>
+                    <li><a href="lesson1_1.html" target="_blank">1)控制DIV属性</a></li>
+					<li><a href="lesson1_2.html" target="_blank">2)网页换肤</a></li>
+					<li><a href="lesson1_3.html" target="_blank">3)函数接收参数并弹出</a></li>
+					<li><a href="lesson1_4.html" target="_blank">4)鼠标移入/移出改变样式</a></li>
+					<li><a href="lesson1_5.html" target="_blank">5)记住密码提示框</a></li>
+                </ul>
+            </div>
+            <span>第二课(12)</span>
+            <div class="Menu">
+                <ul>
+                    <li><a href="lesson2_1.html" target="_blank">1)百度输入法</a></li>
+					<li><a href="lesson2_2.html" target="_blank">2)点击DIV,显示其InnerHTML</a></li>
+					<li><a href="lesson2_3.html" target="_blank">3)弹出层效果</a></li>
+					<li><a href="lesson2_4.html" target="_blank">4)函数传参，改变DIV任意属性的值</a></li>
+					<li><a href="lesson2_5.html" target="_blank">5)图片列表:鼠标移入移出改变透明度</a></li>
+					<li><a href="lesson2_6.html" target="_blank">6)简易选项卡</a></li>
+					<li><a href="lesson2_7.html" target="_blank">7)简易JS年历</a></li>
+					<li><a href="lesson2_8.html" target="_blank">8)单一按钮显示/隐藏-播放列表收缩展开</a></li>
+					<li><a href="lesson2_9.html" target="_blank">9)提示框效果</a></li>
+					<li><a href="lesson2_10.html" target="_blank">10)鼠标移过改变图片路径</a></li>
+					<li><a href="lesson2_11.html" target="_blank">11)复选框(checkbox)全选/全不选/反选</a></li>
+                </ul>
+            </div>
+            <span>第三课(9)</span>
+            <div class="Menu">
+                <ul>
+                    <li>1)用Tpyeof查看数据类型</li>
+					<li>2)用parseInt解析数字,并求和</li>
+					<li>3)累加按钮,自加1</li>
+					<li>4)输入两个数字,比较大小</li>
+					<li>5)页面加载后累加，自加1</li>
+					<li>6)判断数字是否为两位数</li>
+					<li>7)网页计算器</li>
+					<li>8)简易网页时钟</li>
+					<li>9)倒计时钟(100秒)</li>
+                </ul>
+            </div>
+            <span>第四课(9)</span>
+            <div class="Menu">
+                <ul>
+                    <li>1)setTimeout应用</li>
+					<li>2)自动播放-幻灯片效果</li>
+					<li>3)自动改变方向-幻灯片效果</li>
+					<li>4)agrument应用-求出函数参数的总和</li>
+					<li>5)css函数-设置/读取对象的属性</li>
+					<li>6)当前输入框高亮显示</li>
+					<li>7)数组练习:各种数组方法的使用</li>
+					<li>8)事件练习:封装兼容性添加、删除事件的函数</li>
+					<li>9)星级评分系统</li>
+                </ul>
+            </div>
+            <span>第五课(jQuery)</span>
+            <div class="Menu">
+                <ul>
+                    <li><a href="lesson5_1.html" target="_blank">1)DOM操作</a></li>
+					<li><a href="lesson5_2.html" target="_blank">3)轮播效果1</a></li>
+					<li><a href="lesson5_4.html" target="_blank">4)天猫PC端</a></li>
+					<li><a href="lesson5_5.html" target="_blank">5)选项卡</a></li>
+                </ul>
+            </div>
+            <span>第六课(ajax)</span>
+            <div class="Menu">
+                <ul>
+                    <li><a href="lesson6_1.html" target="_blank">1)ajax分页效果</a></li>
+					
+                </ul>
+            </div>
+         </div>
+</html>
